@@ -57,7 +57,10 @@
         >
           <!-- card-1 -->
           <div class="card bg-base-100 shadow-xl rounded-none">
-            <div class="card-body items-center text-center">
+            <div
+              onclick="clickEvent(this)"
+              class="card-body items-center text-center"
+            >
               <!-- rating part -->
               <figure class="px-5 py-5 w-36 h-36 bg-gray-100">
                 <img src="./images/prod1.png" alt="Shoes" class="" />
@@ -97,7 +100,10 @@
 
           <!-- card-2 -->
           <div class="card bg-base-100 shadow-xl rounded-none">
-            <div class="card-body items-center text-center">
+            <div
+              onclick="clickEvent(this)"
+              class="card-body items-center text-center"
+            >
               <!-- rating part -->
               <figure class="px-5 py-5 w-36 h-36 bg-gray-100">
                 <img src="./images/prod2.png" alt="Shoes" class="" />
@@ -136,7 +142,10 @@
           </div>
           <!-- card-3 -->
           <div class="card bg-base-100 shadow-xl rounded-none">
-            <div class="card-body items-center text-center">
+            <div
+              onclick="clickEvent(this)"
+              class="card-body items-center text-center"
+            >
               <!-- rating part -->
               <figure class="px-5 py-5 w-36 h-36 bg-gray-100">
                 <img src="./images/prod3.png" alt="Shoes" class="" />
@@ -192,11 +201,13 @@
               </div>
               <br />
               <div class="card bg-base-100 rounded-none shadow-xl absolute">
+                <ol id="product-list"></ol>
+
                 <hr class="h-px my-4 w-52 m-auto bg-gray-200" />
                 <div class="pl-5 lg:w-60">
-                  <p>Total Price : <span>0</span> tk</p>
-                  <p>Discount : <span>0</span> tk</p>
-                  <p>Total : <span>0</span> tk</p>
+                  <p>Total Price : <span id="total-price">0</span> tk</p>
+                  <p>Discount : <span id="discount">0</span> tk</p>
+                  <p>Total : <span id="total">0</span> tk</p>
                 </div>
 
                 <hr class="h-px my-4 w-52 m-auto bg-gray-200" />
@@ -237,7 +248,10 @@
         >
           <!-- card-1 -->
           <div class="card bg-base-100 shadow-xl rounded-none">
-            <div class="card-body items-center text-center">
+            <div
+              onclick="clickEvent(this)"
+              class="card-body items-center text-center"
+            >
               <!-- rating part -->
               <figure class="px-5 py-5 w-36 h-36 bg-gray-100">
                 <img src="./images/prod4.png" alt="Sports Back Cap" class="" />
@@ -277,7 +291,10 @@
 
           <!-- card-2 -->
           <div class="card bg-base-100 shadow-xl rounded-none">
-            <div class="card-body items-center text-center">
+            <div
+              onclick="clickEvent(this)"
+              class="card-body items-center text-center"
+            >
               <!-- rating part -->
               <figure class="px-5 py-5 w-36 h-36 bg-gray-100">
                 <img src="./images/prod5.png" alt="Shoes" class="" />
@@ -316,7 +333,10 @@
           </div>
           <!-- card-3 -->
           <div class="card bg-base-100 shadow-xl rounded-none">
-            <div class="card-body items-center text-center">
+            <div
+              onclick="clickEvent(this)"
+              class="card-body items-center text-center"
+            >
               <!-- rating part -->
               <figure class="px-5 py-5 w-36 h-36 bg-gray-100">
                 <img src="./images/prod6.png" alt="Shoes" class="" />

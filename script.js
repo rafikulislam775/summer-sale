@@ -1,5 +1,6 @@
 let itemCount = 0; // Initialize the item count
 let totalPrice = 0;
+let discount = 0;
 const couponBtn = document.getElementById("coupon-btn");
 couponBtn.disabled = true;
 
@@ -21,25 +22,28 @@ function clickEvent(target) {
   const productList = document.getElementById("product-list");
   productList.appendChild(li);
 
-  // Update the total price
+  // Update the total price and total field also
   totalPrice += itemPrice;
   const totalPriceElement = document.getElementById("total-price");
   totalPriceElement.innerText = `${totalPrice.toFixed(2)} TK`;
-
+  const total = document.getElementById("total");
+  total.innerText = (totalPrice - discount).toFixed(2);
   // Check and update coupon button
   if (totalPrice >= 200) {
     couponBtn.disabled = false;
+    // alert("Congratulations! You get 20% coupon !");
+    document
+      .getElementById("coupon-btn")
+      .addEventListener("click", function () {
+        const coupon = document.getElementById("coupon");
+        if (coupon.value === "SELL200") {
+          const discountField = document.getElementById("discount-field");
+          discount = (totalPrice * 20) / 100;
+          discountField.innerText = discount.toFixed(2);
+          total.innerText = (totalPrice - discount).toFixed(2);
+        } else {
+          alert("Invalid coupon code");
+        }
+      });
   }
 }
-
-document.getElementById("coupon-btn").addEventListener("click", function () {
-  const coupon = document.getElementById("coupon");
-  if (coupon.value === "SELL200") {
-    const discountField = document.getElementById("discount-field");
-    const discount = (totalPrice * 20) / 100;
-    discountField.innerText = discount.toFixed(2);
-    const total = document.getElementById("total");
-    total.innerText = (totalPrice - discount).toFixed(2);
-    console.log(discount);
-  }
-});

@@ -47,3 +47,9 @@ function clickEvent(target) {
       });
   }
 }
+
+// back to home page  function
+
+document.getElementById("back-home").onclick = function () {
+  location.href = "./index.html";
+};
